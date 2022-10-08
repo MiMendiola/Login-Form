@@ -1,0 +1,170 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    background-color: #1c1255;
+}
+
+.form-container{
+    background-color: white;
+    width: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 90%;
+
+    display: flex;
+    align-items: center;
+
+    .login-container{
+        width: 450px;
+        margin: 0 auto;
+
+        h2{
+            text-align: center;
+            font-size: 2rem;  
+        }
+
+        p, span{
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin: 8px 0;          
+        }
+
+        label{
+            display: block;
+            color: black;
+            text-align: start;
+            font-weight: bold;
+            padding: 5px 0;
+        }
+
+        input.input{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: solid 1px #ccc;
+            border-radius: 5px;
+
+            &:focus{
+                outline: solid 1px #0099ff;
+            }
+        }
+
+        .options{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            margin-top: 20px;
+
+            a{
+                text-decoration: none;
+                color: #0099ff;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .btn{
+            border: none;
+            padding: 10px 0;
+            width: 100%;
+            font-weight: bolder;
+            display: block;
+            border-radius: 5px;
+            text-transform: capitalize;
+            cursor: pointer;
+
+            &.btn-login{
+                background-color: black;
+                color: white;
+
+                &:hover{
+                    background-color: #333;
+                }
+            }
+
+            &.btn-google{
+                background-color: white;
+                color: black;
+                border: solid 1px #ccc;
+
+                &:hover{
+                    background-color: #e2e2e2;
+                }
+            }
+
+            &.btn-facebook{
+                background-color: #0a52d6;
+                color: white;
+
+                &:hover{
+                    background-color: #0845b6;
+                }
+            }
+
+            &.btn-twitter{
+                background-color: #0aa8d8;
+                color: white;
+
+                &:hover{
+                    background-color: #0889b1;
+                }
+            }
+        }
+
+        .providers{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+
+    .welcome-screen-container{
+        background-color: black;
+        height: 100%;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .form-container{
+        width: 95%;
+
+        .login-container{
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .welcome-screen-container{
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .form-container{
+
+        .login-container{
+            width: 350px;
+        }
+
+        .welcome-screen-container{
+            display: none;
+        }
+    }
+}
+
